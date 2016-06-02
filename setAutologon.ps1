@@ -3,4 +3,4 @@ Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlo
 Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\" -Name DefaultUserName -value "labviewbuild"
 
 
-shutdown -r -f -t 120
+shutdown -r -f -t 30
