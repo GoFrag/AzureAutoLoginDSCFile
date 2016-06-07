@@ -3,7 +3,7 @@ Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlo
 Set-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\" -Name DefaultUserName -value "labviewbuild"
 
 # Get the IPv4 address of Azure Machine ( Internal IP )
-$vmName = (Get-ItemProperty –path “HKLM:\SOFTWARE\Microsoft\Virtual Machine\Auto”).RDPAddressIPv4
+$vmName = (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Virtual Machine\Auto").RDPAddressIPv4
 # Replace any non-alphanumeric characters with an underscore
 $vmName = [Regex]::Replace($vmName,"\W","-")
 
