@@ -16,4 +16,5 @@ $vmName = ("AZ" + $vmName.Substring($vmName.Length - [System.Math]::Min(13, $vmN
 # If it is different, change the guest OS name and reboot
 if ($env:computername -ne $vmName) {(gwmi win32_computersystem).Rename($vmName) }
 
+# Forcing restart to make above changes. Default timer for system shutdown is 20 seconds, making it to 0.
 shutdown -r -f -t 0
