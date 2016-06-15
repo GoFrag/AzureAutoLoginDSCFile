@@ -16,4 +16,4 @@ $vmName = ("AZ" + $vmName.Substring($vmName.Length - [System.Math]::Min(13, $vmN
 # If it is different, change the guest OS name and reboot
 if ($env:computername -ne $vmName) {(gwmi win32_computersystem).Rename($vmName) }
 
-shutdown -r -f -t 30
+shutdown -r -f -t 0
